@@ -11,4 +11,3 @@ melon_catalogue = {
                     'weight' : None, 'rind_color' : None}
 }
 
-print(melon_catalogue.keys())

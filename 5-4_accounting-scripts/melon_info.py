@@ -4,12 +4,14 @@
 from melons import melon_catalogue
 
 
-def print_melon(melon_catalogue):
+def print_melon(melon_name):
     """Print each melon with corresponding attribute information."""
+    try:
+        melon_name = melon_name.capitalize()
+        print(melon_name.upper())
 
-    for melon in melon_catalogue:
-        print(melon.upper())
-        for key in melon_catalogue[melon].keys():
-            print(f"    {key}: {melon_catalogue[melon][key]}")
+        for key in melon_catalogue[melon_name].keys():
+            print(f"    {key}: {melon_catalogue[melon_name][key]}")
+    except:
+        print('OOPS! That melon is not in the catalogue.')
 
-print_melon(melon_catalogue)
