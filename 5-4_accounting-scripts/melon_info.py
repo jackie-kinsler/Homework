@@ -4,15 +4,12 @@
 from melons import melon_catalogue
 
 
-def print_melon(name, seedless, price):
+def print_melon(melon_catalogue):
     """Print each melon with corresponding attribute information."""
 
-    have_or_have_not = 'have'
-    if seedless:
-        have_or_have_not = 'do not have'
+    for melon in melon_catalogue:
+        print(melon.upper())
+        for key in melon_catalogue[melon].keys():
+            print(f"    {key}: {melon_catalogue[melon][key]}")
 
-    print(f'{name}s {have_or_have_not} seeds and are ${price:.2f}')
-
-
-for i in melon_names:
-    print_melon(melon_names[i], melon_seedlessness[i], melon_prices[i])
+print_melon(melon_catalogue)
