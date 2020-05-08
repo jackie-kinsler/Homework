@@ -33,6 +33,7 @@ class Melon(object):
 
 # FIXME: Add Squash class definition here.
 class Squash(Melon):
-    
-    def paint(self):
-        self.color = 'green'
+    def prep(self):
+        super().prep()
+        robots.painterbot.paint(self)
+
